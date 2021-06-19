@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<script type="text/javascript" language="javascript">
+		function validateFreeEmail() 
+		{
+			
+ 				var reg = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm
+ 				var a=document.getElementById("Email").value;
+ 				with(window.document.forms.f1)
+ 				{
+ 				if (reg.test(a))
+ 				{
+ 					// window.open("profile.html");
+ 				}
+ 				else
+ 				{
+ 					//return false;
+ 					alert('Enter valid email address')
+ 					Email.value="";
+ 				}
+ 			}
+		} 
+		function validatemo()
+		{
+			var re=/^[\(]?(\d{3})[\)]?[ -\.]?(\d{3})[ -\.]?(\d{4})$/
+			var a=document.getElementById("phone").value;
+			with(window.document.forms.f1)
+			{
+				if(re.test(a))
+				{}
+				else
+				{
+					alert('enter valid mobile number')
+					phone.value="";
+				}
+			}
+		}
+		function onsubmit()
+		{
+			alert('Your resume is Submitted.....!!!!!!');
+			window.open("about us..html","height=200,width=200");
+ 		}	
+	</script>
+</head>
+<body bgcolor="black"> <font color="white">
+<h2>FILL YOUR RESUME DETAILS</h2>
+<fieldset>
+<legend>
+<font type="times new roman" color="yellow" size="15" >Contact Information</font>
+</legend>
+<form name="f1">
+	First Name:
+	<input type="text" name="Firstname"  id="Firstname" placeholder="First name">
+	<br><br>
+	Middle Name:
+	<input type="text" name="Middlename"  id="Middlename" placeholder="Middle name">
+	<br><br>
+	Last Name:
+	<input type="text" name="Lastname"  id="Lastname" placeholder="Last name">
+	<br><br>
+	Address:
+	<textarea name="text" rows="4" cols="20" wrap="soft"></textarea>
+	<br><br>
+	Contact No:
+	<input type="tel" id="phone" name="phone" id="phone" placeholder="123-456-7890" onchange="validatemo()">
+	<br><br>
+	Email ID:
+	<input type="text" name="Email"  id="Email" placeholder="Email" onchange="validateFreeEmail()">
+	<br><br>
+	Date of Birth:
+	<input type="date" name="date" value="dd/mm/yyyy">
+</form>
+</fieldset>
+<fieldset>
+<legend>
+<font type="times new roman" color="yellow" size="15" >Education Details</font>
+</legend>
+		<form name="f2">
+		Objectives:
+		<textarea name="text" rows="4" cols="20" wrap="soft"></textarea>
+		<br><br>
+		Academic Qualifications:
+		<textarea name="text" rows="4" cols="20" wrap="soft"></textarea>
+		<br><br>
+		Experience:
+		<textarea name="text" rows="4" cols="20" wrap="soft"></textarea>
+		<br><br>
+		Relevent Skills:
+		<textarea name="text" rows="4" cols="20" wrap="soft"></textarea>
+		<br>
+		<br>
+	</form>	
+</fieldset></font>
+</body>
+</html>

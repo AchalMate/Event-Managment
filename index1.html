@@ -1,0 +1,40 @@
+<html> 
+<head>
+<title>Login and Registration Form Design</title>
+<link rel="stylesheet"  href="style.css">
+<script type="text/javascript" language="javascript">
+	function checkpass()
+	{
+		with(window.document.forms.form1)
+ 		{
+ 			var chk=pass.value.length;
+ 			if(chk<6)
+ 			{
+ 				alert('Please enter valid Password....!!!! Your password should be minimum 6 charaters')
+ 			}
+ 			else
+ 			{
+				alert('Account Register Successfully');
+ 				window.open("ourproj.html")
+ 			}
+ 		}
+	}
+</script>
+</head>
+<body background="events.jpg">
+<div class="login-page">
+<div class="form">
+	<form class="register-form">
+	<input type="text" placeholder="user name"/>
+	<input type="text" placeholder=" password"/>
+	<button>Create</button>
+</form>
+<form name="form1">
+<input type="text"  placeholder="user name"/>
+<input type="password" name="pass"  placeholder="password"/>
+<input type="button" value="Create" style="color:GREEN" onclick="checkpass()"/>
+</form>
+</div>
+</div>
+</body>
+</html>

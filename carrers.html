@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get best jon in event management</title>
+	<script type="text/javascript" language="javascript">
+		function EmailValidate(Email)
+		{
+			var reg = /[A-Z a-z 0-9]+[\b@gmail.com\b]/
+ 				var a=document.getElementById("Email").value;
+ 				with(window.document.forms.form1)
+ 				{
+ 				if (reg.test(a))
+ 				{}
+ 				else
+ 				{
+ 					//return false;
+ 					alert('Enter valid email address')
+ 					Email.value="";
+ 				}
+ 				}
+		}
+		function validatemo()
+		{
+			var re=/^[\(]?(\d{3})[\)]?[ -\.]?(\d{3})[ -\.]?(\d{4})$/
+			var a=document.getElementById("phone").value;
+			with(window.document.forms.form1)
+			{
+				if(re.test(a))
+				{}
+				else
+				{
+					alert('enter valid mobile number')
+					phone.value="";
+				}
+			}
+		}
+	</script>
+</head>
+<body bgcolor="black"><font color="white">
+<form name="form1">
+	<h2><br>APPLY FOR THE JOB</h2>
+	<br><br><h4>
+	First name: <input type="text" name="Firstname" id="Firstname" placeholder="First name"><br><br>
+	Last name: <input type="text" name="Lastname" id="Lastname" placeholder="Last name">
+	<br><br>
+	Email: <input type="text" name="Email" id="Email"  placeholder="Enter Email" onchange="EmailValidate()">
+	<br><br>
+	Contact No:<input type="tel" id="phone" name="phone" id="phone" placeholder="123-456-7890" onchange="validatemo()">
+	<br><br>
+    Type of Application:<select>
+    <option >Type of Application</option>
+    <option >With experience</option>
+    <option >Fresher</option>  
+  	</select>
+  	<br><br>
+    Interested in:<select>
+    	<option>Interested in</option>
+    	<option>Business Development</option>
+    	<option>Client Servicing</option>
+    	<option>Event Design</option>
+    	<option>Commercial</option>
+    	<option>Finance & Account</option>
+    	<option>Sponsership</option>
+    	<option>Others</option>
+    </select>
+    <br><br>
+    Work Experience: <input type="text" name="WorkExperience" id="WorkExperience" placeholder="Work Experience">
+    <br><br>
+    Your Address: <textarea name="text" rows="4" cols="30" wrap="soft" placeholder="Your Address"></textarea>
+    <br><br>
+    Message Here:<textarea name="text" rows="4" cols="30" wrap="soft" placeholder="Message Here"></textarea>
+    </form></h4></font>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html> 
+<head>
+<title>Login and Registration Form Design</title>
+<link rel="stylesheet"  href="style.css">
+<script type="text/javascript" language="javascript">
+	function Validate(Email)
+	{
+		with(window.document.forms.form1)
+ 		{
+		var reg = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/ig;
+		if(reg.test(Email))
+		{
+			return true;
+		}
+		else
+		{
+			alert("Enter valid email address..");
+			return false;
+		}
+	}}
+	function Valid(no)
+	{
+		var phone=/^\d{10}$/;
+		if(phone.test(no))
+		{
+			return true;
+		}
+		else
+		{
+			alert("Enter valid phone no..");
+			return false;
+		}
+	}
+	function Window1() 
+	{           
+		MyWindow = window.open('index1.html')
+          		MyWindow.focus()
+        	}
+</script>
+</head>
+<body background="events.jpg">
+<div class="login-page">
+<div class="form">
+	<form class="register-form">
+	<input type="text" placeholder="Email"/>
+	<input type="text" placeholder="Phone No"/>
+	<button>Next</button>
+	<a href="index1.html">Next</a>
+</form>
+<form name="form1">
+<input type="text"  placeholder="Email"  onchange="Validate(this.value)"/>
+<input type="text" name="phone"  placeholder="Phone no" onchange="Valid(this.value)"/>
+<INPUT name="back" value="NEXT"   type="button" onclick="Window1()"/>
+</form>
+</div>
+</div><script src='https://code.jquery.com/jquery-3.3.1.min.js'>
+</script>
+</body>
+</html>
